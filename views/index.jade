@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h3.text-center 首页界面
+  table.table.table-bordered
+    thead
+      tr
+        th 姓名
+        th 年龄
+        th 职业
+        th 爱好
+    tbody
+      if users && users.length > 0
+        each user in users
+          tr
+            td #{user.name}
+            td #{user.age}
+            td #{user.job}
+            td #{user.hobby}
+
+  a(href="/admin").btn.btn-default 进入后台

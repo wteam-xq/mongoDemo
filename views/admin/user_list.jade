@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+  h3.text-center 用户后台列表
+  table.table.table-bordered
+    thead
+      tr
+        th 姓名
+        th 年龄
+        th 职业
+        th 爱好
+        th 更新
+        th 删除
+    tbody
+      if users && users.length > 0
+        each user in users
+          tr
+            td #{user.name}
+            td #{user.age}
+            td #{user.job}
+            td #{user.hobby}
+            td 
+              a.link(href="/admin/user/update?id=#{user.id}") 更新
+            td
+              a(href="/admin/user/delete?id=#{user.id}").btn.btn-danger 删除
+
+  a(href="/admin/user/add").btn.btn-primary 添加

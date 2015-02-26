@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+  h3.text-center 用户添加
+  br
+  .container
+    .row
+      form.form-horizontal(method="POST" action="add" name='userform')
+        .form-group
+          label.col-md-2.control-label 姓名
+          .col-md-8
+            input(type="text" id="name" name="name").form-control
+        .form-group
+          label.col-md-2.control-label 年龄
+          .col-md-8
+            input(type="text" id="age" name="age").form-control
+        .form-group
+          label.col-md-2.control-label 职业
+          .col-md-8
+            input(type="text" id="job" name="job").form-control
+        .form-group
+          label.col-md-2.control-label 爱好
+          .col-md-8
+            input(type="text" id="hobby" name="hobby").form-control
+
+        .form-group
+          .col-md-1.col-md-offset-2
+            button(type="submit").btn.btn-primary 提交添加
+          .col-md-2
+            a(href="/admin/").btn.btn-primary 返回
+  
