@@ -22,6 +22,29 @@ block content
             td 
               a.link(href="/admin/user/update?id=#{user.id}") 更新
             td
-              a(href="/admin/user/delete?id=#{user.id}").btn.btn-danger 删除
-
+              a(data-id='#{user.id}' class="removeUser").btn.btn-danger 删除
+      
+      input(type='hidden' value='' id='selectId')
+      
   a(href="/admin/user/add").btn.btn-primary 添加
+
+  //删除提示弹出框
+  .modal(id='removeConfirm')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button(type="button" data-dismiss="modal").close
+            span(aria-hidden="true")&times;
+            span.sr-only Close
+          h4.modal-title 删除提示
+        
+        .modal-body
+          p 确定要删除该用户吗？
+        
+        .modal-footer
+          button(type="button" data-dismiss="modal" id="cancelRemove").btn.btn-default 关闭
+          button(type="button" id="removeSubmit").btn.btn-primary 确定
+              
+  
+  //导入用户处理脚本
+  script(src="/javascripts/users.js")
