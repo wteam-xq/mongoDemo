@@ -34,12 +34,12 @@ block content
       .modal-content
         .modal-header
           button(type="button" data-dismiss="modal").close
-            span(aria-hidden="true")&times;
+            span(aria-hidden="true") &times;
             span.sr-only Close
           h4.modal-title 删除提示
         
         .modal-body
-          p 确定要删除该用户吗？
+          p(id='removeTips') 确定要删除该用户吗？
         
         .modal-footer
           button(type="button" data-dismiss="modal" id="cancelRemove").btn.btn-default 关闭

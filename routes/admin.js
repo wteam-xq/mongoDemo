@@ -17,6 +17,6 @@ router.route('/user/update')
 .post(adminControl.updateUserPost);
 
 /*users delete */
-router.get('/user/delete', adminControl.deleteUser);
+router.post('/user/delete', adminControl.deleteUser);
 
 module.exports = router;

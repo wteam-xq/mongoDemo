@@ -13,14 +13,20 @@ $(function(){
     var $this = $(this);
     var _id = $this.attr('data-id');
     $selected_id.val(_id);
-    $confirm_dialog.modal("toggle");
+    $confirm_dialog.modal({backdrop:'static'});
   });
 
   $remove_submit.on('click', function(){
     // 异步请求
     var $this = $(this);
     var _id = $selected_id.val();
-
+    $.post('/admin/user/delete', {id: _id}, function(data){
+      if (data.error){
+        $('#removeTips').html('删除异常:' + data.error + '  请刷新重试。');
+      }else{
+        window.location.href = '/admin/';
+      }
+    }, 'json');
   });
 
   $remove_cancel.on('click', function(){

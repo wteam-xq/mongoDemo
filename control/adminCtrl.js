@@ -13,14 +13,14 @@ adminCtrol.userList = function(req, res) {
       });
     }
   });
-}
+};
 // 后台接口原数据显示
 adminCtrol.testList = function(req, res) {
   User.fetch(function(err, users){
     if (err){
       console.log('查询异常');
     }else{
-      res.send(users);
+      res.json(users);
     }
   });
 }
@@ -78,14 +78,16 @@ adminCtrol.updateUserPost = function(req, res) {
     }
   });
 }
+
 // 删除用户
 adminCtrol.deleteUser = function(req, res) {
-  var id = req.query.id;
+  var id = req.body.id;
   User.deleteInfo(id, function(err, updateCount){
     if (err){
-      console.log('删除用户信息,出错');
+      // console.log('删除用户信息,出错');
+      res.json({error:err});
     }else{
-      res.redirect('/admin/');
+      res.json({success: true});
     }
   });
 }
