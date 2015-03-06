@@ -8,12 +8,25 @@
   * 手动安装mongodb, 下载地址： [mongodb下载](http://pan.baidu.com/s/1qWG5Lr2)
   * mongodb 配置以及设置成windows服务：[配置mongodb](http://blog.csdn.net/liusong0605/article/details/10574863)
   * mongodb shell 控制台使用: [mongodb 基本命令](http://www.cnblogs.com/xusir/archive/2012/12/24/2830957.html)
+```Bash
+mongo
+MongoDB shell version: 2.6.5
+connecting to: test
 
-* nodejs 全局安装bower（可以顺便全局安装dev）动态获取最新bootstrap库，然后将 jquery.min.js、bootstrap.min.js、bootstrap.min.css放入public/components目录
+use mongoDemo
+switched to db mongoDemo
+
+db.createCollection("users")
+{ "ok" : 1}
+
+```
+##### ps: 如果配置 mongodb 成window服务 遇到“服务名无效” 的问题， 请单击左下角"开始"图标-》所有程序-》附件-》右键“命令提示符” 以管理员身份运行
+
+* nodejs 全局安装bower（可以顺便全局安装node-dev）动态获取最新bootstrap库，然后将 jquery.min.js、bootstrap.min.js、bootstrap.min.css放入public/components目录
   * 安装 对应模块
   ```Bash
   npm install -g bower 
-  npm install -g dev
+  npm install -g node-dev
   ```
   * 到项目目录 使用bower安装bootstrap
   ```Bash

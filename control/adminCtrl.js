@@ -2,6 +2,7 @@ var adminCtrol = {
 }
 var User = require('../models/User');
 
+// 查询用户列表（所有用户）
 adminCtrol.userList = function(req, res) {
   User.fetch(function(err, users){
     if (err){
@@ -14,7 +15,8 @@ adminCtrol.userList = function(req, res) {
     }
   });
 };
-// 后台接口原数据显示
+
+// 后台接口原数据显示(异步接口)
 adminCtrol.testList = function(req, res) {
   User.fetch(function(err, users){
     if (err){
@@ -24,7 +26,6 @@ adminCtrol.testList = function(req, res) {
     }
   });
 }
-
 
 adminCtrol.addUser = function(req, res) {
   res.render('admin/user_add', { title: 'admin' });
@@ -48,6 +49,7 @@ adminCtrol.addUserPost = function(req, res, next) {
     }
   });
 }
+
 // 修改用户信息
 adminCtrol.updateUser = function(req, res) {
   var id = req.query.id;
@@ -84,7 +86,6 @@ adminCtrol.deleteUser = function(req, res) {
   var id = req.body.id;
   User.deleteInfo(id, function(err, updateCount){
     if (err){
-      // console.log('删除用户信息,出错');
       res.json({error:err});
     }else{
       res.json({success: true});
