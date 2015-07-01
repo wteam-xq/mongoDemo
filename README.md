@@ -20,28 +20,18 @@ db.createCollection("users")
 { "ok" : 1}
 
 ```
-##### ps: 如果配置 mongodb 成window服务 遇到“服务名无效” 的问题， 请单击左下角"开始"图标-》所有程序-》附件-》右键“命令提示符” 以管理员身份运行
-
-* nodejs 全局安装bower（可以顺便全局安装node-dev）动态获取最新bootstrap库，然后将 jquery.min.js、bootstrap.min.js、bootstrap.min.css放入public/components目录
-  * 安装 对应模块
-  ```Bash
-  npm install -g bower 
-  npm install -g node-dev
-  ```
-  * 到项目目录 使用bower安装bootstrap
-  ```Bash
-  bower install bootstrap
-  ```
 
 * 进入工程目录 cmd: npm install 安装node_modules的依赖模块
 ```Bash
 npm install
 ```
 
-* 工程目录下 npm start（或 node-dev bin/www）启动项目, ps: nodejs 的 dev库实现 修改node.js文件保存后自动重启node 
+* 工程目录下 npm start启动项目
 ```Bash
 npm start
 ```
 ```Bash
 node-dev bin/www
 ```
+
+* 打开浏览器（建议 chrome）输入： `localhost:300`(端口号在 bin/www 文件中设置)
