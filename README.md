@@ -30,8 +30,5 @@ npm install
 ```Bash
 npm start
 ```
-```Bash
-node-dev bin/www
-```
 
 * 打开浏览器（建议 chrome）输入： `localhost:300`(端口号在 bin/www 文件中设置)
