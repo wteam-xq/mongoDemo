@@ -106,7 +106,6 @@ npm install
 ```Bash
 npm start
 ```  
-如看到黄色警告什么的，暂时忽略吧(+﹏+)~  
 
 ### 7.浏览器访问项目：  
 打开浏览器（建议 chrome）输入： localhost:3000(端口号在 bin/www 文件中可设置)  
