@@ -61,7 +61,28 @@ net start MongoDB
 ![截图8](https://github.com/wteam-xq/mongoDemo/blob/master/deploy_images/8.jpg)  
 ![截图9](https://github.com/wteam-xq/mongoDemo/blob/master/deploy_images/9.jpg)  
 
-#### 4.3 在mongodb 生成新表：
+#### 4.3 打开mongo shell窗口：
+
+mongoDB服务启动话就可以在D:\mongodb\bin 目录中 shift + 右键 -> “**在此处打开命令行**”：
+![截图6](https://github.com/wteam-xq/mongoDemo/blob/master/deploy_images/6.jpg) 
+
+然后输入以下指令：
+```Bash
+mongo
+```  
+看到以下窗口，说明打开成功！
+![截图15](https://github.com/wteam-xq/mongoDemo/blob/master/deploy_images/15.jpg)  
+ 
+每次打开shell都得到 D:\mongodb\bin 目录多麻烦啊！
+
+配置过java环境变量的同学都知道： 如果想在任何地方打开CMD都能访问 “mongo.exe”只要在 **系统->环境变量**中设置即可：
+
+![截图16](https://github.com/wteam-xq/mongoDemo/blob/master/deploy_images/16.jpg)  
+
+配置好环境变量后就可以在任何目录 window + R 然后键入CMD后 输入指令“mongo”打开shell窗口了： 
+![截图17](https://github.com/wteam-xq/mongoDemo/blob/master/deploy_images/17.jpg)  
+
+#### 4.4 在mongodb 生成新表：
 4.2步骤成功后就可以使用mongodb shell窗口了，常见指令说明见参考文档；接下来使用如下指令生成一张新表：  
 ```Bash
 use mongoDemo
