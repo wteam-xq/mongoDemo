@@ -123,6 +123,6 @@ npm start
 #### 参考文档：  
 [Win7上Git安装及配置过程-baifengxian-ChinaUnix博客](http://blog.chinaunix.net/uid-25806493-id-3319781.html)  
 [mongoDB——安装和启动](http://blog.csdn.net/liusong0605/article/details/10574863)  
-[MongoDB基本命令用](http://www.cnblogs.com/xusir/archive/2012/12/24/2830957.html)  
+[MongoDB基本命令用法](http://www.cnblogs.com/xusir/archive/2012/12/24/2830957.html)  
 [淘宝 NPM 镜像](http://npm.taobao.org/)  
-[Download Robomongo](http://robomongo.org/download.html)  
+[Download Robomongo](http://robomongo.org)  

@@ -3,7 +3,8 @@
 * 技术点： mongodb express bootstrap jquery
 
 ### 图文部署讲解
-* [图文部署文档传送门](https://github.com/wteam-xq/mongoDemo/blob/master/graphTutorial.md)
+* [图文部署文档传送门（win7）](https://github.com/wteam-xq/mongoDemo/blob/master/graphTutorial.md)
+* [图文部署文档传送门（mac）](https://github.com/wteam-xq/mongoDemo/blob/master/graphTutorial_mac.md)
 
 #### 本地部署（win7 64bit为例）
 * 安装nodeJs
