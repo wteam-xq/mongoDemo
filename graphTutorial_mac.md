@@ -63,8 +63,8 @@ db.createCollection("users")
 { "ok" : 1}
 ```  
 ### 5.安装依赖模块：
-步骤1下载的node环境这个时候就派上用场了， 进入步骤3拷贝的项目文件根目录，打开命令行窗口：  
-![截图10](https://github.com/wteam-xq/mongoDemo/blob/master/deploy_images/10.jpg)   
+步骤1下载的node环境这个时候就派上用场了， 进入步骤3拷贝的项目文件根目录(推荐mac上的"go2shell"小工具)，打开命令行窗口;  
+
 输入以下命令行（可能会download很久， 太久不成功可使用淘宝的npm镜像）：  
 ```Bash
 npm install
